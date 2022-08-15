@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multipleImagesDisplayFragmentLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/searchResultsFragmentLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Search Results"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/multipleImagesDisplayFragmentReturnButton"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/multipleImagesDisplayFragmentReturnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        android:text="&lt;"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/multipleImagesDisplayFragmentRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multipleImagesDisplayFragmentReturnButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

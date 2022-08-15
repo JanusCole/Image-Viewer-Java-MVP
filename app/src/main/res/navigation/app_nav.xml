@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_navigation_graph"
+    app:startDestination="@id/imageSearchFragment"
+    >
+    <fragment
+        android:id="@+id/imageSearchFragment"
+        android:name="com.example.janus.imageviewer_kotlin.ImageSearch.ImageSearchFragment"
+        android:label="ImageSearchFragment"
+        >
+        <action
+            android:id="@+id/action_go_to_multiple_image_display_screen"
+            app:destination="@id/multipleImageDisplayFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/multipleImageDisplayFragment"
+        android:name="com.example.janus.imageviewer_kotlin.MultipleImageDisplay.MultipleImageDisplayFragment"
+        android:label="MultipleImageDisplayFragment"
+        >
+        <action
+            android:id="@+id/action_go_to_image_search_screen"
+            app:destination="@id/imageSearchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+        <action
+            android:id="@+id/action_go_to_single_image_display_screen"
+            app:destination="@id/singleImageDisplayFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            >
+        </action>
+        <argument
+            android:name="searchCriteria"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleImageDisplayFragment"
+        android:name="com.example.janus.imageviewer_kotlin.singleimagedisplay.SingleImageDisplayFragment"
+        android:label="SingleImageDisplayFragment"
+        >
+        <action
+            android:id="@+id/action_go_to_multiple_image_display_screen"
+            app:destination="@id/multipleImageDisplayFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+        <argument
+            android:name="imageId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

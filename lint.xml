@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+
+	<!-- Upgrade severity of subtle manifest bugs -->
+	<issue id="ManifestOrder" severity="error" />
+
+	<!-- Upgrade severity of missing minimum and target SDK attributes -->
+	<issue id="UsesMinSdkAttributes" severity="error" />
+
+	<!-- Upgrade severity of missing onClick method referenced from XML -->
+	<issue id="OnClick" severity="error" />
+
+	<!-- Upgrade severity of typos -->
+	<issue id="Typos" severity="error" />
+
+	<!-- Upgrade severity of unused import -->
+	<issue id="UnusedNamespace" severity="error" />
+
+	<!-- Change the severity of hardcoded strings to "error" -->
+	<issue id="HardcodedText" severity="error" />
+
+	<!-- Ignore "Obsolete Gradle Dependency" which forces library to be upgraded to latest version. -->
+	<issue id="GradleDependency" severity="informational"/>
+
+	<!-- Ignore "Unused resources" because lint does not see resources used from Kotlin.  -->
+	<issue id="UnusedResources" severity="informational"/>
+
+	<!-- Ignore these because we wont use Rtl -->
+	<issue id="RtlSymmetry" severity="informational" />
+	<issue id="RtlHardcoded" severity="informational" />
+	<issue id="RtlEnabled" severity="informational" />
+
+	<!-- Ignore this because we don't have french translations yet -->
+	<issue id="MissingTranslation" severity="informational" />
+</lint>
